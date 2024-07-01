@@ -14,7 +14,7 @@ O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plata
 Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo:
 </p>
 
-<table>
+<table align='center'>
 <colgroup>
     <col style="background-color: #722f37" />
     <col span="2" />
@@ -23,31 +23,31 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
     <th>ID</th>
     <th>NOME</th>
     <th>MATRÍCULA</th>
-    <th></th>
+    <th>FOTO</th>
 </tr>
 <tr>
     <td>1</td>
-    <td><a href = "https://github.com/gustavomartins-github">Gustavo Martins Ribeiro</a></td>
+    <td align='center'><a href = "https://github.com/gustavomartins-github">Gustavo Martins Ribeiro</a></td>
     <td>200019228</td>
-    <td><img src="https://github.com/gustavomartins-github.png" width = 50%></t>
+    <td align='center'><img src="https://github.com/gustavomartins-github.png" width = 50%></t>
 </tr>
 <tr>
     <td>2</td>
     <td><a href = "https://github.com/PabloChristianno">Pablo Christianno Silva Guedes</a></td>
     <td>200042416</td>
-    <td><img src="https://github.com/PabloChristianno.png" width = 50%></t>
+    <td align='center'><img src="https://github.com/PabloChristianno.png" width = 50%></t>
 </tr>
 <tr>
     <td>3</td>
-    <td><a href = "https://github.com/PhilipeSousa">Philipe de Sousa Barros</a></td>
+    <td align='center'><a href = "https://github.com/PhilipeSousa">Philipe de Sousa Barros</a></td>
     <td>170154319</td>
-    <td><img src="https://github.com/PhilipeSousa.png" width = 50%></t>
+    <td align='center'><img src="https://github.com/PhilipeSousa.png" width = 50%></t>
 </tr>
 <tr>
     <td>4</td>
-    <td><a href = "https://github.com/deivid-a1">Deivid Alves de Carvalho</a></td>
+    <td align='center'><a href = "https://github.com/deivid-a1">Deivid Alves de Carvalho</a></td>
     <td>190026758</td>
-    <td><img src="https://github.com/deivid-a1.png" width = 50%></t>
+    <td align='center'><img src="https://github.com/deivid-a1.png" width = 50%></t>
 </tr>
 </table>
 
@@ -59,12 +59,12 @@ A seguir, confira as regras de negócio para este projeto
 # REGRAS DE NEGÓCIO
 
 <p align='justify'>
-Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, o projeto consiste em um comércio varejista de bens de consumo e deve conter os seguintes elementos principais: clientes e compras. Dentro do universo de clientes, há 3 tipos principais: padrão, especial e prime. Agora sobre o universo de compras, há 2 tipos de imposto (ICMS e Imposto Municipal) que devem ser somados ao valor da compra total e o frete. Sendo assim, a <strong><i>Tabela 2</i></strong> a seguir sintetiza as informações sobre os clientes, enquanto a <strong><i>Tabela 3</i>apresenta as informações sobre compras</strong>
+Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, o projeto consiste em um comércio varejista de bens de consumo e deve conter os seguintes elementos principais: clientes e compras. Dentro do universo de clientes, há 3 tipos principais: padrão, especial e prime. Agora sobre o universo de compras, há 2 tipos de imposto (ICMS e Imposto Municipal) que devem ser somados ao valor da compra total e o frete. Sendo assim, a <strong><i>Tabela 2</i></strong> a seguir sintetiza as informações sobre os clientes, enquanto as <strong><i>Tabelas 3 e 4</i></strong> apresentam as informações sobre compras</strong>
 </p>
 
 <ol>
   <li>Cliente</li>
-        <p>Tabela contendo as clausulas e vantagens por tipo de cliente</p>
+        <p><strong><i>Tabela 2</i></strong> contendo as clausulas e vantagens por tipo de cliente</p>
         <table>
         <colgroup>
             <col style="background-color: #006400" />
@@ -77,12 +77,12 @@ Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunc
         </tr>
         <tr>
             <td>Padrão</td>
-            <td>nenhuma</td>
-            <td>nenhuma</td>
+            <td align='center'>nenhuma</td>
+            <td align='center'>nenhuma</td>
         </tr>
         <tr>
             <td>Especial</td>
-            <td>compra mensal > R$ 100,00</td>
+            <td align='center'>compra mensal > R$ 100,00</td>
             <td>
                 <ol>
                 <li>Desconto de 30% no frete</li>
@@ -93,7 +93,7 @@ Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunc
         </tr>
         <tr>
             <td>Prime</td>
-            <td>pagar mensalidade de R$20,00</td>
+            <td align='center'>pagar mensalidade de R$20,00</td>
             <td>
             <ol>
                 <li>Desconto de 100% no frete (frete = R$ 0,00)</li>
@@ -106,8 +106,8 @@ Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunc
         </table>
 
   <li>Compras</li>
-        <p>Tabela contendo as informações de imposto sobre a compra</p>
-        <table>
+        <p><strong><i>Tabela 3</i></strong> contendo as informações de imposto sobre a compra</p>
+        <table align='center'>
         <colgroup>
             <col style="background-color: #993399" />
             <col span="2" />
@@ -118,19 +118,19 @@ Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunc
             <th>CLIENTE FORA DO DF</th>
         </tr>
         <tr>
-            <td>ICMS</td>
-            <td>18%</td>
-            <td>12%</td>
+            <td align='center'>ICMS</td>
+            <td align='center'>18%</td>
+            <td align='center'>12%</td>
         </tr>
         <tr>
-            <td>Imposto Municipal</td>
-            <td>0%</td>
-            <td>4%</td>
+            <td align='center'>Imposto Municipal</td>
+            <td align='center'>0%</td>
+            <td align='center'>4%</td>
         </tr>
         </table>
         <br></br>
-        <p>Tabela contendo as informações de frete que deve ser somado ao valor total da compra</p>
-        <table>
+        <p><strong><i>Tabela 4</i></strong> contendo as informações de frete que deve ser somado ao valor total da compra</p>
+        <table align='center'>
         <colgroup>
             <col style="background-color: #000080" />
             <col span="2" />
@@ -182,7 +182,5 @@ Devido a quantidade de regras de negócio, foi acordado entre os membros a model
 
 <figure align = "center">
     <img src="img/Diagrama de Classes UML.png" width=100%>
-        <figcaption align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>
-                Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)
-        </figcaption>
 </figure>
+<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
