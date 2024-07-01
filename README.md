@@ -181,7 +181,7 @@ Devido a quantidade de regras de negócio, foi acordado entre os membros a model
 </p>
 
 <figure align = "center">
-    <img src="img/Diagrama de Classes UML.png" width=60%>
+    <img src="img/Diagrama de Classes UML.png" width=100%>
         <figcaption align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>
                 Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)
         </figcaption>
