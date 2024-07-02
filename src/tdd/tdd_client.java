@@ -15,7 +15,6 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import app.cadastroClient;
-import app.client;
 
 @RunWith(Parameterized.class)
 public class tdd_client {
