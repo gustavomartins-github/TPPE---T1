@@ -15,11 +15,11 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import app.client;
+import app.cadastroClient;
 
 public class tdd_client {
 	
-	private client cliente;
-	private Object[] clientes;
+	private cadastroClient setCadastro;
 	
 	private int id;
 	private String nome;
@@ -30,22 +30,24 @@ public class tdd_client {
 	
 	@Before
 	public void setup() {
-		cliente = new client();
+		 setCadastro = new cadastroClient();
 	}
-	
-	public tdd_client(Object[] clientes, int id, String nome, String uf, boolean isInterior, boolean especial, boolean prime) {
-		
-		this.clientes = clientes;
-		this.id = id;
-		this.nome = nome;
-		this.uf = uf;
-		this.isInterior = isInterior;
-		this.especial = especial;
-		this.prime = prime;
-	}
+//	
+//	public tdd_client(Object[] clientes, int id, String nome, String uf, boolean isInterior, boolean especial, boolean prime) {
+//		
+//		this.clientes = clientes;
+//		this.id = id;
+//		this.nome = nome;
+//		this.uf = uf;
+//		this.isInterior = isInterior;
+//		this.especial = especial;
+//		this.prime = prime;
+//	}
 	
 	@Test
 	public void testCadastroCliente() {
-		assertTrue(cliente.cadastrarClient(10, "Marcelo Rodrigues", "DF", false, false, false));
+		assertEquals(11, setCadastro.adicionaClient(11, "roberto Marinho", "DF", false, false, false));
+		assertEquals(11, setCadastro.deletarClient(11));
 	}
+	
 }

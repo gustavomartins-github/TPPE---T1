@@ -43,13 +43,9 @@ public class client {
 		tabelaRegioes.put("RS", 5);
 	}
 	
-	public void executaTabela() {
-		adicioanesEstados();
-	}
-	
 	public client(int id, String nome, String uf, boolean isInterior, boolean especial, boolean prime) {
 		
-		
+		adicioanesEstados();
 		this.id = id;
 		this.nome = nome;
 		this.uf = uf;
