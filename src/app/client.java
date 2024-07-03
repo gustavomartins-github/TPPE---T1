@@ -11,6 +11,7 @@ public class client {
 	private boolean isInterior;
 	private boolean especial;
 	private boolean prime;
+	private float cashback;
 	
 	
 	HashMap<String, Integer> tabelaRegioes = new HashMap<>();
@@ -43,7 +44,7 @@ public class client {
 		tabelaRegioes.put("RS", 5);
 	}
 	
-	public client(int id, String nome, String uf, boolean isInterior, boolean especial, boolean prime) {
+	public client(int id, String nome, String uf, boolean isInterior, boolean especial, boolean prime, float cashback) {
 		
 		adicioanesEstados();
 		this.id = id;
@@ -53,6 +54,7 @@ public class client {
 		this.isInterior = isInterior;
 		this.especial = especial;
 		this.prime = prime;
+		this.cashback = cashback;
 	}
 
 	public int getId() {
@@ -106,9 +108,17 @@ public class client {
 	public boolean isPrime() {
 		return prime;
 	}
-
+	
 	public void setPrime(boolean prime) {
 		this.prime = prime;
+	}
+
+	public float getCashback() {
+		return cashback;
+	}
+
+	public void setCashback(float cashback) {
+		this.cashback = cashback;
 	}
 	
 }
