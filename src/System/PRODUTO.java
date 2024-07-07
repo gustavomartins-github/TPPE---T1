@@ -1,19 +1,24 @@
-package app;
+package System;
 
-public class Produto {
+import TiposDeDados.UnidadeMedida;
+
+public class PRODUTO {
+	
+	// Atributos
     private int codigo;
     private String descricao;
     private float valorVenda;
-    private String unidadeMedida;
+    private UnidadeMedida unidadeMedida;
 
-    
-    public Produto(int codigo, String descricao, float valorVenda, String unidadeMedida) {
+    // Construtor
+    public PRODUTO(int codigo, String descricao, float valorVenda, UnidadeMedida unidadeMedida) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.valorVenda = valorVenda;
         this.unidadeMedida = unidadeMedida;
     }
 
+    // Getters e Setters
     public int getCodigo() {
         return codigo;
     }
@@ -38,11 +43,21 @@ public class Produto {
         this.valorVenda = valorVenda;
     }
 
-    public String getUnidadeMedida() {
+    public UnidadeMedida getUnidadeMedida() {
         return unidadeMedida;
     }
 
-    public void setUnidadeMedida(String unidadeMedida) {
+    public void setUnidadeMedida(UnidadeMedida unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "codigo=" + codigo +
+                ", descricao='" + descricao + '\'' +
+                ", valorVenda=" + valorVenda +
+                ", unidadeMedida='" + unidadeMedida + '\'' +
+                '}';
     }
 }
