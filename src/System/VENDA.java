@@ -118,32 +118,39 @@ public class VENDA {
     	}
     }
     
-    // Calcular total da venda
-    public float calcularTotal() {
-        // Calcular o total dos itens no carrinho
-        float totalCarrinho = itensVendidos.calcularTotal();
-
-        // Calcular o valor do frete
-        float frete = calcularFrete(cliente);
-
-        // Calcular o ICMS e o Imposto Municipal
+    // EXTRAIR MÉTODO: calcular o valor total do carrinho
+    private float calcularTotalCarrinho() {
+        return itensVendidos.calcularTotal();
+    }
+    
+    // EXTRAIR MÉTODO: calcular o total do imposto (ICMS + Imposto Municipal)
+    private float calcularImpostos(float totalCarrinho) {
         float icms = totalCarrinho * calcularICMS(cliente);
         float impostoMunicipal = totalCarrinho * calcularImpostoMunicipal(cliente);
-
-        // Aplicar o cashback se necessário
+        return icms + impostoMunicipal;
+    }
+    
+    // EXTRAIR MÉTODO: aplicação do cashback
+    private float aplicarCashback(float totalCarrinho) {
         float cashbackAplicado = 0;
         if (usarCashback && cliente.getCashback() > 0) {
             cashbackAplicado = Math.min(cliente.getCashback(), totalCarrinho);
             cliente.setCashback(cliente.getCashback() - cashbackAplicado);
             totalCarrinho -= cashbackAplicado;
         }
-
-        // Calcular o total da venda
-        float totalVenda = totalCarrinho + frete + icms + impostoMunicipal;
+        return totalCarrinho;
+    }
+    
+    // EXTRAIR MÉTODO: venda::calcularTotal()
+    public float calcularTotal() {
+        float totalCarrinho = calcularTotalCarrinho();
+        float frete = calcularFrete(cliente);
+        float impostos = calcularImpostos(totalCarrinho);
+        totalCarrinho = aplicarCashback(totalCarrinho);
+        float totalVenda = totalCarrinho + frete + impostos;
 
         return totalVenda;
     }
-
     
     // Getters e Setters
     public LocalDate getDataVenda() {
