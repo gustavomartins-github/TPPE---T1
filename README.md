@@ -2,8 +2,6 @@
 
 <p align='justify'> 
 O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados métodos/classes do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho atual deve atender as seguintes cláusulas:
-
-Obs.: deadline será daqui duas semanas 
 </p>
 
 <ol>
@@ -12,6 +10,7 @@ Obs.: deadline será daqui duas semanas
   <li>A switch de teste definida no trabalho anterior deve continuar retornando verde</li>
   <li><strong>Após aplicar uma técnica de refatoração, é necessário criar um comentário no código descrevendo os efeitos da operação de refatoração no código</strong></li>
 </ol>
+<p align = "justify"><strong>Obs.:</strong> deadline será daqui duas semanas (contabilizando a partir do dia 24/07)</p> 
 
 <p>
 Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo. Observe que o grupo continuar com os mesmo integrantes do trabalho anterior.
@@ -127,7 +126,7 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 
 # MODELAGEM
 
-<p align = "center">
+<p align = "justify">
 A seguir, para fins de revisão, observe o Diagrama de Classes UML do projeto.
 </p>
 
