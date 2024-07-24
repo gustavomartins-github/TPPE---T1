@@ -1,17 +1,20 @@
 # TRABALHO 01 (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho deve atender as seguintes cláusulas:
+O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados métodos/classes do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho atual deve atender as seguintes cláusulas:
+
+Obs.: deadline será daqui duas semanas 
 </p>
 
 <ol>
   <li>Linguagem de programação: Java</li>
   <li>Frarmework de Teste: JUnit 4</li>
-  <li>Todos os testes deverão ser triangulados utilizando a parametrização de testes oferecida pelo JUnit4</li>
+  <li>A switch de teste definida no trabalho anterior deve continuar retornando verde</li>
+  <li><strong>Após aplicar uma técnica de refatoração, é necessário criar um comentário no código descrevendo os efeitos da operação de refatoração no código</strong></li>
 </ol>
 
 <p>
-Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo:
+Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo. Observe que o grupo continuar com os mesmo integrantes do trabalho anterior.
 </p>
 
 <table align='center'>
@@ -51,136 +54,86 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 </tr>
 </table>
 
-<p> 
-A seguir, confira as regras de negócio para este projeto
-</p>
-<br></br>
 
-# REGRAS DE NEGÓCIO
+# SOBRE A REFATORAÇÃO
 
-<p align='justify'>
-Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, o projeto consiste em um comércio varejista de bens de consumo e deve conter os seguintes elementos principais: clientes e compras. Dentro do universo de clientes, há 3 tipos principais: padrão, especial e prime. Agora sobre o universo de compras, há 2 tipos de imposto (ICMS e Imposto Municipal) que devem ser somados ao valor da compra total e o frete. Sendo assim, a <strong><i>Tabela 2</i></strong> a seguir sintetiza as informações sobre os clientes, enquanto as <strong><i>Tabelas 3 e 4</i></strong> apresentam as informações sobre compras</strong>
+<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, todos os grupo deverão aplicar as seguintes técnicas de refatoração:
 </p>
 
 <ol>
-  <li>Cliente</li>
-        <p><strong><i>Tabela 2</i></strong> contendo as clausulas e vantagens por tipo de cliente</p>
-        <table>
-        <colgroup>
-            <col style="background-color: #006400" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>TIPO</th>
-            <th>CLAUSULA</th>
-            <th>VANTAGENS</th>
-        </tr>
-        <tr>
-            <td>Padrão</td>
-            <td align='center'>nenhuma</td>
-            <td align='center'>nenhuma</td>
-        </tr>
-        <tr>
-            <td>Especial</td>
-            <td align='center'>compra mensal > R$ 100,00</td>
-            <td>
-                <ol>
-                <li>Desconto de 30% no frete</li>
-                <li>Desconto de 10% sobre o valor total da compra</li>
-                <li>Desconto de mais 10% se utilizar o cartão de crédito da empresa</li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>Prime</td>
-            <td align='center'>pagar mensalidade de R$20,00</td>
-            <td>
-            <ol>
-                <li>Desconto de 100% no frete (frete = R$ 0,00)</li>
-                <li>Cashback de R$ 0,03 por real gasto na loja</li>
-                <li>Cashback de R$ 0,05 por real gasto caso use o cartão de crédito da empresa</li>
-                <p><strong>Obs.:</strong> O valor <u>acumulado</u> de cashback pode ser utilizado como desconto em compras.</p>
-                </ol>
-            </td>
-        </tr>
-        </table>
-
-  <li>Compras</li>
-        <p><strong><i>Tabela 3</i></strong> contendo as informações de imposto sobre a compra</p>
-        <table align='center'>
-        <colgroup>
-            <col style="background-color: #993399" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>TIPO</th>
-            <th>CLIENTE DO DF</th>
-            <th>CLIENTE FORA DO DF</th>
-        </tr>
-        <tr>
-            <td align='center'>ICMS</td>
-            <td align='center'>18%</td>
-            <td align='center'>12%</td>
-        </tr>
-        <tr>
-            <td align='center'>Imposto Municipal</td>
-            <td align='center'>0%</td>
-            <td align='center'>4%</td>
-        </tr>
-        </table>
-        <br></br>
-        <p><strong><i>Tabela 4</i></strong> contendo as informações de frete que deve ser somado ao valor total da compra</p>
-        <table align='center'>
-        <colgroup>
-            <col style="background-color: #000080" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>REGIÃO</th>
-            <th>CAPITAL</th>
-            <th>INTERIOR</th>
-        </tr>
-        <tr>
-            <td>Distrito Federal (DF)</td>
-            <td>R$ 5,00</td>
-            <td>R$ 0,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Centro-oeste</td>
-            <td>R$ 10,00</td>
-            <td>R$ 13,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Nordeste</td>
-            <td>R$ 15,00</td>
-            <td>R$ 18,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Norte</td>
-            <td>R$ 20,00</td>
-            <td>R$ 25,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Sudeste</td>
-            <td>R$ 7,00</td>
-            <td>R$ 10,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Sul</td>
-            <td>R$ 10,00</td>
-            <td>R$ 13,00</td>
-        </tr>
-        </table>
+    <li><strong>Extrair Método</strong>: consiste em identificar um conjunto de instruções dentro de um método e movê-las para um novo método separado. Isso melhora a legibilidade, promove a reutilização do código e facilita a manutenção.</li>
+    <li><strong>Extrair Classe</strong>: envolve identificar uma parte significativa de funcionalidades dentro de uma classe existente e movê-las para uma nova classe separada. Isso ajuda a organizar melhor o código, reduzindo a complexidade da classe original e promovendo uma melhor estruturação do sistema.</li>
+    <li><strong>Substituir método por objeto-método</strong>: nesse caso, um método de uma classe é transformado em um objeto de uma nova classe, onde o método original é movido como um método desse novo objeto. Isso pode ser útil quando há necessidade de manter estado entre chamadas de método ou para encapsular lógicas complexas de maneira mais organizada.</li>
 </ol>
 
-<br></br>
+<br>
+
+<p align = "justify"> Somado a isso, de acordo com o <a href = "https://docs.google.com/spreadsheets/u/0/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/htmlview#gid=0">formulário dos grupos</a>, nosso grupo é identificado pelo grupo 17, logo devemos aplicar as tecnicas apresentadas acima nos seguintes métodos/classe:</p>
+
+<br>
+<table align='center'>
+<colgroup>
+    <col style="background-color: #722f37" />
+    <col span="2" />
+</colgroup>
+<tr>
+    <th>MÉTODO DE REFATORAÇÃO</th>
+    <th>CLASSE</th>
+    <th>MÉTODO</th>
+</tr>
+<tr>
+    <th>Extrair Método</th>
+    <th>VENDA</th>
+    <th>calcularTotal()</th>
+</tr>
+<tr>
+    <th>Extrair Classe/Superclasse</th>
+    <th>CLIENTE</th>
+    <th>não se aplica</th>
+</tr>
+<tr>
+    <th>Substituir método por objeto-método</th>
+    <th>CLIENTE</th>
+    <th>calcularTotal(), resultante da refatoração extrair método</th>
+</tr>
+</table>
+
+# SOBRE A CORREÇÃO DO PROFESSOR
+
+<p align = "justify">O professor atribuirá nota de acordo com a seguinte distruibuição</p>
+
+<table align='center'>
+<colgroup>
+    <col style="background-color: #722f37" />
+    <col span="2" />
+</colgroup>
+<tr>
+    <th>MÉTODO DE REFATORAÇÃO</th>
+    <th>VALOR</th>
+</tr>
+<tr>
+    <th>Extrair Método</th>
+    <th>25%</th>
+</tr>
+<tr>
+    <th>Extrair Superclasse</th>
+    <th>25%</th>
+</tr>
+<tr>
+    <th>Substituir método por objeto-método</th>
+    <th>50%</th>
+</tr>
+<table>
+
 # MODELAGEM
 
-<p align='justify'>
-Devido a quantidade de regras de negócio, foi acordado entre os membros a modelagem do projeto utilizando a Linguagem de Modelagem Unificada (UML) para a minimalização de eventuais erros estruturais, além de guiar nosso desenvolvimento. Somado a isso, vale ressaltar que o artefato <strong><i>Diagrama de Classes UML</i></strong> desenvolvido foi atualizado conforme a necessidade durante o desenvolvimento do projeto. Confira o artefato UML desenvolvido na <i><strong>imagem 1</strong></i> a seguir.
+<p align = "center">
+A seguir, para fins de revisão, observe o Diagrama de Classes UML do projeto.
 </p>
 
+<br>
 <figure align = "center">
     <img src="img/Diagrama de Classes UML.png" width=100%>
 </figure>
 <p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
+
