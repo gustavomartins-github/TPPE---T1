@@ -1,4 +1,4 @@
-# TRABALHO 01 (FGA0242 - TPPE)
+# TRABALHO 02 (FGA0242 - TPPE)
 
 <p align='justify'> 
 O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados métodos/classes do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho atual deve atender as seguintes cláusulas:
@@ -67,7 +67,7 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 
 <br>
 
-<p align = "justify"> Somado a isso, de acordo com o <a href = "https://docs.google.com/spreadsheets/u/0/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/htmlview#gid=0">formulário dos grupos</a>, nosso grupo é identificado pelo grupo 17, logo devemos aplicar as tecnicas apresentadas acima nos seguintes métodos/classe:</p>
+<p align = "justify"> Somado a isso, de acordo com o <a href = "https://docs.google.com/spreadsheets/u/0/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/htmlview#gid=0">formulário dos grupos</a>, nosso grupo é identificado pelo grupo <strong>27</strong>, logo devemos aplicar as tecnicas apresentadas acima nos seguintes métodos/classe:</p>
 
 <br>
 <table align='center'>
@@ -83,7 +83,7 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 <tr>
     <th>Extrair Método</th>
     <th>VENDA</th>
-    <th>calcularTotal()</th>
+    <th>calcularFrete()</th>
 </tr>
 <tr>
     <th>Extrair Classe/Superclasse</th>
@@ -92,8 +92,8 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 </tr>
 <tr>
     <th>Substituir método por objeto-método</th>
-    <th>CLIENTE</th>
-    <th>calcularTotal(), resultante da refatoração extrair método</th>
+    <th>VENDA</th>
+    <th>calcularTotal()</th>
 </tr>
 </table>
 
