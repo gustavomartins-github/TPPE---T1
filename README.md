@@ -1,7 +1,7 @@
-# TRABALHO 01 (FGA0242 - TPPE)
+# TRABALHOS DA DISCIPLINA (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho deve atender as seguintes cláusulas:
+O presente repositório é destinado à documentação dos trabalhos da disciplina de <a href="https://github.com/andrelanna/fga0242/tree/master">Técnicas de Programação em Plataformas Emergentes (TPPE)</a> da <a href="https://fga.unb.br/">Faculdade de Engenharias do Gama - Universidade de Brasília (FGA-UnB)</a>. Diante disso, vale ressaltar que nosso grupo é identificado como 27, de acordo com a <a href="https://docs.google.com/spreadsheets/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/edit?gid=0#gid=0">planilha de grupos</a> disponibilizada pelo <a href="https://github.com/andrelanna">professor</a>
 </p>
 
 <ol>
