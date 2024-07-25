@@ -1,17 +1,8 @@
 # TRABALHOS DA DISCIPLINA (FGA0242 - TPPE)
 
+## INTRODUÇÃO
 <p align='justify'> 
-O presente repositório é destinado à documentação dos trabalhos da disciplina de <a href="https://github.com/andrelanna/fga0242/tree/master">Técnicas de Programação em Plataformas Emergentes (TPPE)</a> da <a href="https://fga.unb.br/">Faculdade de Engenharias do Gama - Universidade de Brasília (FGA-UnB)</a>. Diante disso, vale ressaltar que nosso grupo é identificado como 27, de acordo com a <a href="https://docs.google.com/spreadsheets/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/edit?gid=0#gid=0">planilha de grupos</a> disponibilizada pelo <a href="https://github.com/andrelanna">professor</a>
-</p>
-
-<ol>
-  <li>Linguagem de programação: Java</li>
-  <li>Frarmework de Teste: JUnit 4</li>
-  <li>Todos os testes deverão ser triangulados utilizando a parametrização de testes oferecida pelo JUnit4</li>
-</ol>
-
-<p>
-Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo:
+O presente repositório é destinado à documentação dos trabalhos da disciplina de <a href="https://github.com/andrelanna/fga0242/tree/master">Técnicas de Programação em Plataformas Emergentes (TPPE)</a> da <a href="https://fga.unb.br/">Faculdade de Engenharias do Gama - Universidade de Brasília (FGA-UnB)</a>. Somado a isso, vale ressaltar que nosso grupo é identificado como 27, de acordo com a <a href="https://docs.google.com/spreadsheets/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/edit?gid=0#gid=0">planilha de grupos</a> disponibilizada pelo <a href="https://github.com/andrelanna">professor</a>. A <storng>Tabela 1</storng> a seguir sintetisa os integrantes do grupo. 
 </p>
 
 <table align='center'>
@@ -51,133 +42,40 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 </tr>
 </table>
 
-<p> 
-A seguir, confira as regras de negócio para este projeto
+<p align = "center">
+  <strong>Tabela 1:</strong> síntese das informações dos envolvidos nos trabalhos.
+  <br>
+  <stong>Obs.:</stong> vale ressaltar que os integrantes foram os mesmos em todos os trabalhos.
 </p>
+
 <br></br>
 
-# REGRAS DE NEGÓCIO
-
-<p align='justify'>
-Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, o projeto consiste em um comércio varejista de bens de consumo e deve conter os seguintes elementos principais: clientes e compras. Dentro do universo de clientes, há 3 tipos principais: padrão, especial e prime. Agora sobre o universo de compras, há 2 tipos de imposto (ICMS e Imposto Municipal) que devem ser somados ao valor da compra total e o frete. Sendo assim, a <strong><i>Tabela 2</i></strong> a seguir sintetiza as informações sobre os clientes, enquanto as <strong><i>Tabelas 3 e 4</i></strong> apresentam as informações sobre compras</strong>
+## SOBRE A ORGANIZAÇÃO DO REPOSITÓRIO
+<p>
+O repositório foi organizado da seguitne forma:
 </p>
 
 <ol>
-  <li>Cliente</li>
-        <p><strong><i>Tabela 2</i></strong> contendo as clausulas e vantagens por tipo de cliente</p>
-        <table>
-        <colgroup>
-            <col style="background-color: #006400" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>TIPO</th>
-            <th>CLAUSULA</th>
-            <th>VANTAGENS</th>
-        </tr>
-        <tr>
-            <td>Padrão</td>
-            <td align='center'>nenhuma</td>
-            <td align='center'>nenhuma</td>
-        </tr>
-        <tr>
-            <td>Especial</td>
-            <td align='center'>compra mensal > R$ 100,00</td>
-            <td>
-                <ol>
-                <li>Desconto de 30% no frete</li>
-                <li>Desconto de 10% sobre o valor total da compra</li>
-                <li>Desconto de mais 10% se utilizar o cartão de crédito da empresa</li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>Prime</td>
-            <td align='center'>pagar mensalidade de R$20,00</td>
-            <td>
-            <ol>
-                <li>Desconto de 100% no frete (frete = R$ 0,00)</li>
-                <li>Cashback de R$ 0,03 por real gasto na loja</li>
-                <li>Cashback de R$ 0,05 por real gasto caso use o cartão de crédito da empresa</li>
-                <p><strong>Obs.:</strong> O valor <u>acumulado</u> de cashback pode ser utilizado como desconto em compras.</p>
-                </ol>
-            </td>
-        </tr>
-        </table>
-
-  <li>Compras</li>
-        <p><strong><i>Tabela 3</i></strong> contendo as informações de imposto sobre a compra</p>
-        <table align='center'>
-        <colgroup>
-            <col style="background-color: #993399" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>TIPO</th>
-            <th>CLIENTE DO DF</th>
-            <th>CLIENTE FORA DO DF</th>
-        </tr>
-        <tr>
-            <td align='center'>ICMS</td>
-            <td align='center'>18%</td>
-            <td align='center'>12%</td>
-        </tr>
-        <tr>
-            <td align='center'>Imposto Municipal</td>
-            <td align='center'>0%</td>
-            <td align='center'>4%</td>
-        </tr>
-        </table>
-        <br></br>
-        <p><strong><i>Tabela 4</i></strong> contendo as informações de frete que deve ser somado ao valor total da compra</p>
-        <table align='center'>
-        <colgroup>
-            <col style="background-color: #000080" />
-            <col span="2" />
-        </colgroup>
-        <tr>
-            <th>REGIÃO</th>
-            <th>CAPITAL</th>
-            <th>INTERIOR</th>
-        </tr>
-        <tr>
-            <td>Distrito Federal (DF)</td>
-            <td>R$ 5,00</td>
-            <td>R$ 0,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Centro-oeste</td>
-            <td>R$ 10,00</td>
-            <td>R$ 13,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Nordeste</td>
-            <td>R$ 15,00</td>
-            <td>R$ 18,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Norte</td>
-            <td>R$ 20,00</td>
-            <td>R$ 25,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Sudeste</td>
-            <td>R$ 7,00</td>
-            <td>R$ 10,00</td>
-        </tr>
-        <tr>
-            <td>Regiao Sul</td>
-            <td>R$ 10,00</td>
-            <td>R$ 13,00</td>
-        </tr>
-        </table>
+  <li>
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/main">Branch main</a>: responsável pela ramificação principal (origin). Nela, encontra-se a concatenação de todos os projetos, sendo útil para verificar um sistema contendo a integração de todos os outros trabalhos realizados ao longo da disciplina
+  </li>
+  <li>
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Branch T1_TDD</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 1</strong>, o qual envolvia a aplicação da técnica de TDD, com triangulação e switch de testes parametrizados, entre outras características intrínsecas à tecnica.
+  </li>
+  <li>
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_refactoring">Branch T2_Refactoring</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 2</strong>, o qual consiste em aplicar algumas técnicas de refatoração sobre determinados elementos do pŕojeto, variando entre métodos e classes, sobre o projeto entregue no trabalho 1 mencionado anteriormente.
+  </li>
+  <li>
+    <a href="">Branch T3_(atividade)</a>: responsál pela documentação e projeto relacionado ao <strong>Trabalho 3</strong>, o qual ainda será definido.
+  </li>
 </ol>
 
 <br></br>
-# MODELAGEM
+
+## MODELAGEM
 
 <p align='justify'>
-Devido a quantidade de regras de negócio, foi acordado entre os membros a modelagem do projeto utilizando a Linguagem de Modelagem Unificada (UML) para a minimalização de eventuais erros estruturais, além de guiar nosso desenvolvimento. Somado a isso, vale ressaltar que o artefato <strong><i>Diagrama de Classes UML</i></strong> desenvolvido foi atualizado conforme a necessidade durante o desenvolvimento do projeto. Confira o artefato UML desenvolvido na <i><strong>imagem 1</strong></i> a seguir.
+A modelagem do projeto foi definida durante a realização do <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Trabalho 1</a>, e se perpetuou para todos os outros trabalhos. A seguir, confira a <strong>Imagem 1</strong> a seguir, a qual representa a modelagem do projeto, sendo esta desenvolvida respeitando a técnica denominada <a herf="https://www.ibm.com/docs/pt-br/rsas/7.5.0?topic=structure-class-diagrams">Diagrama de Classes UML</a>. Por fim, vale ressaltar que a confecção desse artefato não foi de carater obrigatório para a disciplina, sendo o objetivo de sua realização evitar determinados erros, documentar para possiveis atualizações futuras e, por fim, facilitar o entendimento do sistema.
 </p>
 
 <figure align = "center">
