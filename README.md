@@ -66,7 +66,7 @@ O repositório foi organizado da seguitne forma:
     <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_refactoring">Branch T2_Refactoring</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 2</strong>, o qual consiste em aplicar algumas técnicas de refatoração sobre determinados elementos do pŕojeto, variando entre métodos e classes, sobre o projeto entregue no trabalho 1 mencionado anteriormente.
   </li>
   <li>
-    <a href="">Branch T3_(atividade)</a>: responsál pela documentação e projeto relacionado ao <strong>Trabalho 3</strong>, o qual ainda será definido.
+    <a href="">Branch T3_(atividade)</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 3</strong>, o qual ainda será definido.
   </li>
 </ol>
 
@@ -81,4 +81,4 @@ A modelagem do projeto foi definida durante a realização do <a href="https://g
 <figure align = "center">
     <img src="img/Diagrama de Classes UML.png" width=100%>
 </figure>
-<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
+<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br><strong>Ref.:</strong> autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
