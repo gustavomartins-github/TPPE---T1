@@ -27,11 +27,30 @@ public class VENDA {
     // Calcular Frete
     public int calcularFrete (CLIENTE cliente) {
     	// Variaveis auxiliares
+    	int frete = 0;
         Regiao regiaoCliente = CLIENTE.getVerificarRegiao(cliente.getEstado());
-        int frete = 0;
 
-        // Verificando valor do frete
-        switch (regiaoCliente) {
+        // Verificando valor do frete de cada Região
+        frete = valorPorRegiao(cliente, regiaoCliente);
+        
+        // Aplicar desconto de frete para clientes especiais e prime
+        frete = aplicaDesconto(cliente, frete);
+        
+        return frete;
+    }
+
+	public int aplicaDesconto(CLIENTE cliente, int frete) {
+		if (cliente.getTipoCliente() == TipoCliente.PRIME) {
+            frete = 0;
+        } else if (cliente.getTipoCliente() == TipoCliente.ESPECIAL) {
+            frete *= 0.7;
+        }
+		return frete;
+	}
+
+	public int valorPorRegiao(CLIENTE cliente, Regiao regiaoCliente) {
+		int frete = 0;
+		switch (regiaoCliente) {
 	        case Regiao.DISTRITO_FEDERAL:
 	        	if (cliente.isCapital() == true) {
 	        		frete = 5;
@@ -72,19 +91,11 @@ public class VENDA {
 	        		frete = 10;
 	        	}
 	        	else {
-	        		return 13;
+	        		frete = 13;
 	        	}
         }
-        
-        // Aplicar desconto de frete para clientes especiais e prime
-        if (cliente.getTipoCliente() == TipoCliente.PRIME) {
-            frete = 0;
-        } else if (cliente.getTipoCliente() == TipoCliente.ESPECIAL) {
-            frete *= 0.7;
-        }
-        
-        return frete;
-    }
+		return frete;
+	}
     
     // AtualizarCashback
     public void atualizarCashback (CLIENTE cliente, VENDA venda) {
