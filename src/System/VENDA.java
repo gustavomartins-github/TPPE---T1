@@ -27,75 +27,74 @@ public class VENDA {
     // Calcular Frete
     public int calcularFrete (CLIENTE cliente) {
     	// Variaveis auxiliares
-    	int frete = 0;
-        Regiao regiaoCliente = CLIENTE.getVerificarRegiao(cliente.getEstado());
-
-        // Verificando valor do frete de cada Região
-        frete = valorPorRegiao(cliente, regiaoCliente);
+        int frete = 0;
         
-        // Aplicar desconto de frete para clientes especiais e prime
-        frete = aplicaDesconto(cliente, frete);
+        frete = verificaValorDoFrete(cliente, frete);
+        
+        frete = aplicarDesconto(cliente, frete);
         
         return frete;
     }
-
-	public int aplicaDesconto(CLIENTE cliente, int frete) {
-		if (cliente.getTipoCliente() == TipoCliente.PRIME) {
+    
+    public int aplicarDesconto(CLIENTE cliente, int frete) {
+    	if (cliente.getTipoCliente() == TipoCliente.PRIME) {
             frete = 0;
         } else if (cliente.getTipoCliente() == TipoCliente.ESPECIAL) {
             frete *= 0.7;
         }
-		return frete;
-	}
-
-	public int valorPorRegiao(CLIENTE cliente, Regiao regiaoCliente) {
-		int frete = 0;
-		switch (regiaoCliente) {
-	        case Regiao.DISTRITO_FEDERAL:
-	        	if (cliente.isCapital() == true) {
-	        		frete = 5;
-	        	}
-	        	else {
-	        		frete = 0;
-	        	}
-	        case Regiao.REGIAO_CENTRO_OESTE:
-	        	if (cliente.isCapital() == true) {
-	        		frete = 10;
-	        	}
-	        	else {
-	        		frete = 13;
-	        	}
-	        case Regiao.REGIAO_NORDESTE:  
-	        	if (cliente.isCapital() == true) {
-	        		frete = 15;
-	        	}
-	        	else {
-	        		frete = 18;
-	        	}
-	        case Regiao.REGIAO_NORTE:  
-	        	if (cliente.isCapital() == true) {
-	        		frete = 20;
-	        	}
-	        	else {
-	        		frete = 25;
-	        	}
-	        case Regiao.REGIAO_SUDESTE:  
-	        	if (cliente.isCapital() == true) {
-	        		frete = 7;
-	        	}
-	        	else {
-	        		frete = 10;
-	        	}
-	        case Regiao.REGIAO_SUL:  
-	        	if (cliente.isCapital() == true) {
-	        		frete = 10;
-	        	}
-	        	else {
-	        		frete = 13;
-	        	}
-        }
-		return frete;
-	}
+    	return frete;
+    }
+    
+    public int verificaValorDoFrete(CLIENTE cliente, int frete) {
+    	cliente.getEndereco();
+		Regiao regiaoCliente = ENDERECO.getVerificarRegiao(cliente.getEndereco().getEstado());
+    	
+    	switch (regiaoCliente) {
+        case Regiao.DISTRITO_FEDERAL:
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 5;
+        	}
+        	else {
+        		frete = 0;
+        	}
+        case Regiao.REGIAO_CENTRO_OESTE:
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 10;
+        	}
+        	else {
+        		frete = 13;
+        	}
+        case Regiao.REGIAO_NORDESTE:  
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 15;
+        	}
+        	else {
+        		frete = 18;
+        	}
+        case Regiao.REGIAO_NORTE:  
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 20;
+        	}
+        	else {
+        		frete = 25;
+        	}
+        case Regiao.REGIAO_SUDESTE:  
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 7;
+        	}
+        	else {
+        		frete = 10;
+        	}
+        case Regiao.REGIAO_SUL:  
+        	if (cliente.getEndereco().isCapital() == true) {
+        		frete = 10;
+        	}
+        	else {
+        		return 13;
+        	}
+    	}
+    	return frete;
+    }
     
     // AtualizarCashback
     public void atualizarCashback (CLIENTE cliente, VENDA venda) {
@@ -111,7 +110,7 @@ public class VENDA {
     
     // Calcular ICMS
     public float calcularICMS (CLIENTE cliente) {
-    	if (cliente.getEstado() == Estado.DF) {
+    	if (cliente.getEndereco().getEstado() == Estado.DF) {
     		return 0.18f;
     	}
     	else {
@@ -121,7 +120,7 @@ public class VENDA {
     
     // Calcular Imposto Municipal
     public float calcularImpostoMunicipal (CLIENTE cliente) {
-    	if (cliente.getEstado() == Estado.DF) {
+    	if (cliente.getEndereco().getEstado() == Estado.DF) {
     		return 0f;
     	}
     	else {
@@ -129,38 +128,8 @@ public class VENDA {
     	}
     }
     
-    // EXTRAIR MÉTODO: calcular o valor total do carrinho
-    private float calcularTotalCarrinho() {
-        return itensVendidos.calcularTotal();
-    }
-    
-    // EXTRAIR MÉTODO: calcular o total do imposto (ICMS + Imposto Municipal)
-    private float calcularImpostos(float totalCarrinho) {
-        float icms = totalCarrinho * calcularICMS(cliente);
-        float impostoMunicipal = totalCarrinho * calcularImpostoMunicipal(cliente);
-        return icms + impostoMunicipal;
-    }
-    
-    // EXTRAIR MÉTODO: aplicação do cashback
-    private float aplicarCashback(float totalCarrinho) {
-        float cashbackAplicado = 0;
-        if (usarCashback && cliente.getCashback() > 0) {
-            cashbackAplicado = Math.min(cliente.getCashback(), totalCarrinho);
-            cliente.setCashback(cliente.getCashback() - cashbackAplicado);
-            totalCarrinho -= cashbackAplicado;
-        }
-        return totalCarrinho;
-    }
-    
-    // EXTRAIR MÉTODO: venda::calcularTotal()
     public float calcularTotal() {
-        float totalCarrinho = calcularTotalCarrinho();
-        float frete = calcularFrete(cliente);
-        float impostos = calcularImpostos(totalCarrinho);
-        totalCarrinho = aplicarCashback(totalCarrinho);
-        float totalVenda = totalCarrinho + frete + impostos;
-
-        return totalVenda;
+        return new CALCULADORADETOTAL(this).calcular();
     }
     
     // Getters e Setters

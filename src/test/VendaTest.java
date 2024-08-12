@@ -21,7 +21,8 @@ public class VendaTest {
     @Before
     public void setUp() {
         // Exemplo de configuração inicial para teste
-        CLIENTE cliente = new CLIENTE(TipoCliente.PADRAO, Estado.SP, true);
+    	ENDERECO endereco = new ENDERECO(Estado.SP, true);
+        CLIENTE cliente = new CLIENTE(TipoCliente.PADRAO, endereco);
         CARRINHO carrinho = new CARRINHO(cliente);
         venda = new VENDA(LocalDate.now(), cliente, carrinho, MetodoPagamento.DINHEIRO, false);
         carrinho.adicionarProduto(new PRODUTO(1, "Produto Teste", 100.0f, UnidadeMedida.UN), 1);
@@ -51,7 +52,7 @@ public class VendaTest {
     // Teste calcularFrete
     @Test
     public void testCalcularFrete() {
-        venda.getCliente().setEstado(novoEstadoCliente);
+        venda.getCliente().getEndereco().setEstado(novoEstadoCliente);
         venda.setMetodoPagamento(novoMetodoPagamento);
         venda.setUsarCashback(novoUsarCashback);
         int resultado = venda.calcularFrete(venda.getCliente());
@@ -68,7 +69,7 @@ public class VendaTest {
     // Teste atualizarCashback
     @Test
     public void testAtualizarCashback() {
-        venda.getCliente().setEstado(novoEstadoCliente);
+        venda.getCliente().getEndereco().setEstado(novoEstadoCliente);
         venda.setMetodoPagamento(novoMetodoPagamento);
         venda.setUsarCashback(novoUsarCashback);
 
@@ -82,7 +83,7 @@ public class VendaTest {
     // Teste calcularICMS
     @Test
     public void testCalcularICMS() {
-        venda.getCliente().setEstado(novoEstadoCliente);
+        venda.getCliente().getEndereco().setEstado(novoEstadoCliente);
         venda.setMetodoPagamento(novoMetodoPagamento);
         venda.setUsarCashback(novoUsarCashback);
         float resultado = venda.calcularICMS(venda.getCliente());
@@ -94,7 +95,7 @@ public class VendaTest {
     // Teste calcularImpostoMunicipal
     @Test
     public void testCalcularImpostoMunicipal() {
-        venda.getCliente().setEstado(novoEstadoCliente);
+        venda.getCliente().getEndereco().setEstado(novoEstadoCliente);
         venda.setMetodoPagamento(novoMetodoPagamento);
         venda.setUsarCashback(novoUsarCashback);
         float resultado = venda.calcularImpostoMunicipal(venda.getCliente());
@@ -106,7 +107,7 @@ public class VendaTest {
     // Teste calcularTotal
     @Test
     public void testCalcularTotal() {
-        venda.getCliente().setEstado(novoEstadoCliente);
+        venda.getCliente().getEndereco().setEstado(novoEstadoCliente);
         venda.setMetodoPagamento(novoMetodoPagamento);
         venda.setUsarCashback(novoUsarCashback);
         float resultado = venda.calcularTotal();

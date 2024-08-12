@@ -8,10 +8,15 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) {
+    	// Criação de endereços
+    	ENDERECO endereco1 = new ENDERECO(Estado.SP, true);
+    	ENDERECO endereco2 = new ENDERECO(Estado.MG, false);
+    	ENDERECO endereco3 = new ENDERECO(Estado.DF, true);
+    	
         // Criação de clientes
-        CLIENTE cliente1 = new CLIENTE(TipoCliente.PADRAO, Estado.SP, true);
-        CLIENTE cliente2 = new CLIENTE(TipoCliente.ESPECIAL, Estado.MG, false);
-        CLIENTE cliente3 = new CLIENTE(TipoCliente.PRIME, Estado.DF, true);
+        CLIENTE cliente1 = new CLIENTE(TipoCliente.PADRAO, endereco1);
+        CLIENTE cliente2 = new CLIENTE(TipoCliente.ESPECIAL, endereco2);
+        CLIENTE cliente3 = new CLIENTE(TipoCliente.PRIME, endereco3);
 
         // Criação de produtos
         PRODUTO produto1 = new PRODUTO(1, "Produto A", 10.0f, UnidadeMedida.UN);

@@ -56,7 +56,7 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 
 # SOBRE A REFATORAÇÃO
 
-<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/TP">enunciado do problema</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, todos os grupo deverão aplicar as seguintes técnicas de refatoração:
+<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp1">enunciado do problema</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, todos os grupo deverão aplicar as seguintes técnicas de refatoração:
 </p>
 
 <ol>
