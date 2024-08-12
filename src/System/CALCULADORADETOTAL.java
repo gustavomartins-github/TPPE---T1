@@ -1,5 +1,12 @@
 package System;
 
+/* Classe resultante da atividade de refatoração "Substituir método por objeto-método" sobre o método calcularTotal na classe VENDA.
+    
+    Durante a aplicação dessa tecnica de refatoração, mais especificamente na etapa de movimentação da lógica do método fonte, uma 
+    oportunidade de aplicação da técnica extrair método se fez presente sobre o bloco de código responsável por aplicar o cashback
+    quando necessário, o que deu origem a mais um método: aplicarCashback.
+
+*/
 public class CALCULADORADETOTAL {
 	private VENDA venda;
 

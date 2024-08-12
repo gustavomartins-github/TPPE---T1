@@ -5,6 +5,19 @@ import java.util.Map;
 import TiposDeDados.Estado;
 import TiposDeDados.Regiao;
 
+/* Classe gerada pela atividade de refatoração Extrair Classe sobre a classe CLIENTE.
+
+    Essa classe (ENDERERCO) é responsável pelas informações de endereço de um cliente que,
+    no caso do sistema atual, consistem no estado em que a pessoa vive (utilizado para descobrir
+    sua respectiva região) e a informação de que essa localização é a capital ou não. Tais
+    informações impactam no cálculo do frete de uma venda que, por sua vez, impacta no valor 
+    total dessa venda.
+
+    Por fim, a criação dessa classe impacta na forma como as outras classes acessam a informação,
+    pois originalmente era feita de maneira direta sobre a classe CLIENTE, sendo agora necessário
+    acessar as informações de endreço a partir de um objeto ENDERECO contido em um objeto CLIENTE.
+
+*/
 public class ENDERECO {
 
 	private Estado estado;

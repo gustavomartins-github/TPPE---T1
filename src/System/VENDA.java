@@ -24,7 +24,22 @@ public class VENDA {
         this.usarCashback = usarCashback;
     }
     
-    // Calcular Frete
+
+
+    /* Método calcularFrete (REFATORADO)
+
+        Ao aplicar a técnica de refatoração "Extrair Método" sobre o método calcularFrete, perecebe-se os seguintes efeitos:
+
+        1) a partir do método fonte calcularFrete, foi criado dois novas métodos:
+            - verrificaValorDoFrete (CLIENTE cliente, int frete)
+            - aplicarDesconto(CLIENTE cliente, int frete)
+        2) Redução da complexidade do método: o método fonte foi extraído em partes menores, facilitando o entendimento
+        3) Melhoria na legibilidade: é mais agradável ler o método após a aplicação da refatoração Extrair Método
+        4) Manutenção facilitade: é mais fácil realizar manutenção no método após o aumento de sua modularização por meio da criação de novos métodos
+        5) Encapsulamento: a lógica mais complexa do método foi encapsulada em novos métodos, tornando a interação com o método mais facilitada
+
+        Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 2 (Extrair Classe) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
+    */
     public int calcularFrete (CLIENTE cliente) {
     	// Variaveis auxiliares
         int frete = 0;
@@ -35,7 +50,7 @@ public class VENDA {
         
         return frete;
     }
-    
+    // método alvo gerado pela técnica Extrair método a parir do método fonte calcularFrete
     public int aplicarDesconto(CLIENTE cliente, int frete) {
     	if (cliente.getTipoCliente() == TipoCliente.PRIME) {
             frete = 0;
@@ -44,7 +59,7 @@ public class VENDA {
         }
     	return frete;
     }
-    
+    // método alvo gerado pela técnica Extrair método a partir do método fonte calcularFrete
     public int verificaValorDoFrete(CLIENTE cliente, int frete) {
     	cliente.getEndereco();
 		Regiao regiaoCliente = ENDERECO.getVerificarRegiao(cliente.getEndereco().getEstado());
@@ -128,6 +143,20 @@ public class VENDA {
     	}
     }
     
+    /* Método calcularTotal (REFATORADO)
+
+        Ao aplicar a técnica de refatoração "Substituir método por objeto-método" sobre o método calcularTotal, perecebe-se os seguintes efeitos:
+
+        1) A partir do método fonte calcularTotal, foi criado uma nova classe denominada CALCULADORADETOTAL. Nessa classe, se fez presente a necessidade de aplicação da técnica Extrair Método novamente 
+        2) Melhoria da Coesão: o objeto-método foca em realizar uma única tarefa, promovendo o princípio da responsabilidade única.
+        3) Maior facilidade em Teste Unitário: com a lógica dividida em métodos menores dentro do objeto-método, é mais fácil escrever testes unitários específicos e granulares, 
+        o que pode aumentando a cobertura e a qualidade dos testes.
+        4) Melhoria da Legibilidade: com a lógica complexa encapsulada em métodos menores dentro do objeto-método, o código se torna mais legível e compreensível,
+        facilitando a leitura e a manutenção por outros desenvolvedores.
+        5) Melhoria na escalabilidade: o objeto-método pode ser facilmente estendido para adicionar novas funcionalidades sem modificar a classe original, promovendo a escalabilidade e a flexibilidade do sistema
+
+        Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 3 (Substituir método por objeto-método) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
+    */
     public float calcularTotal() {
         return new CALCULADORADETOTAL(this).calcular();
     }
