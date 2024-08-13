@@ -1,60 +1,12 @@
 # TRABALHO 02 (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados métodos/classes do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho atual deve atender as seguintes cláusulas:
+O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados elementos do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Diante disso, durante a aplicação de cada técnica de refatoração, <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD/src/test">a suíte de teste estabelicida no trabalho 1</a> foi utilizada novamente <strong>a fim de verificar se a atividade de refetoração manteve o comportamento do elemento alvo</strong>. Não obstante, vale ressaltar que o presente documento é dividido em 3 tópicos principais. <strong>O primeio</strong> introduz cada técnica de refatoração e apresenta seu respectivo elemento alvo, isto é, a classe e/ou o método que será refatorado. Logo em seguida, <strong>o segundo</strong> tópico apresenta a distribuição de notas estipulada pelo professor frente a aplicação cada uma das técnicas de refatoração. Por fim, <strong>o terceiro e último tópico</strong> apresenta a evolução do artefato Diagrama de Classes UML, o qual foi desenvolvido inicialmente no trabalho anterior.
 </p>
 
-<ol>
-  <li>Linguagem de programação: Java</li>
-  <li>Frarmework de Teste: JUnit 4</li>
-  <li>A switch de teste definida no trabalho anterior deve continuar retornando verde</li>
-  <li><strong>Após aplicar uma técnica de refatoração, é necessário criar um comentário no código descrevendo os efeitos da operação de refatoração no código</strong></li>
-</ol>
-<p align = "justify"><strong>Obs.:</strong> deadline será daqui duas semanas (contabilizando a partir do dia 24/07)</p> 
+<br>
 
-<p>
-Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo. Observe que o grupo continuar com os mesmo integrantes do trabalho anterior.
-</p>
-
-<table align='center'>
-<colgroup>
-    <col style="background-color: #722f37" />
-    <col span="2" />
-</colgroup>
-<tr>
-    <th>ID</th>
-    <th>NOME</th>
-    <th>MATRÍCULA</th>
-    <th>FOTO</th>
-</tr>
-<tr>
-    <td>1</td>
-    <td align='center'><a href = "https://github.com/gustavomartins-github">Gustavo Martins Ribeiro</a></td>
-    <td>200019228</td>
-    <td align='center'><img src="https://github.com/gustavomartins-github.png" width = 50%></t>
-</tr>
-<tr>
-    <td>2</td>
-    <td><a href = "https://github.com/PabloChristianno">Pablo Christianno Silva Guedes</a></td>
-    <td>200042416</td>
-    <td align='center'><img src="https://github.com/PabloChristianno.png" width = 50%></t>
-</tr>
-<tr>
-    <td>3</td>
-    <td align='center'><a href = "https://github.com/PhilipeSousa">Philipe de Sousa Barros</a></td>
-    <td>170154319</td>
-    <td align='center'><img src="https://github.com/PhilipeSousa.png" width = 50%></t>
-</tr>
-<tr>
-    <td>4</td>
-    <td align='center'><a href = "https://github.com/deivid-a1">Deivid Alves de Carvalho</a></td>
-    <td>190026758</td>
-    <td align='center'><img src="https://github.com/deivid-a1.png" width = 50%></t>
-</tr>
-</table>
-
-
-# SOBRE A REFATORAÇÃO
+# 1. SOBRE A REFATORAÇÃO
 
 <p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp1">enunciado do problema</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, todos os grupo deverão aplicar as seguintes técnicas de refatoração:
 </p>
@@ -97,7 +49,9 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 </tr>
 </table>
 
-# SOBRE A CORREÇÃO DO PROFESSOR
+<br>
+
+# 2. SOBRE A CORREÇÃO DO PROFESSOR
 
 <p align = "justify">O professor atribuirá nota de acordo com a seguinte distruibuição</p>
 
@@ -124,15 +78,17 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
 </tr>
 <table>
 
-# MODELAGEM
+<br>
+
+# 3. MODELAGEM
 
 <p align = "justify">
-A seguir, para fins de revisão, observe o Diagrama de Classes UML do projeto.
+De acordo com as novas classes criadas e outras modificações resultantes das aplicações das técnicas de refatoração, o artefato Diagrama de Classes foi atualizado para comportar as evoluções. Tais alterações podem ser verificadas pela <strong>Imagem 1</strong> a seguir.
 </p>
 
 <br>
 <figure align = "center">
     <img src="img/Diagrama de Classes UML.png" width=100%>
 </figure>
-<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
+<p align = "center"><strong>Imagem 1</strong>: segunda versão do artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
 
