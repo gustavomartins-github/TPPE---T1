@@ -1,14 +1,14 @@
 # TRABALHO 03 - TRABALHO FINAL (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 3 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em responder duas perguntas, baseando-se no <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2"> enunciado do trabalho 3</a>. Diante disso, o <strong>tópico 1</strong> do presente documento apresenta alguns pontos relevantes do enunciado, enquanto o <strong>tópico 2</strong> é responsável por apresentar tais peguntas. Em seguida, o <strong>tópico 3</strong> traz informações relevantes sobre a construção das respostas. Por sua vez, o <strong>tópico 4</strong> é responsável por apresentar as informações gerais sobe o trabalho, como deadline e formato de entrega. Por fim, o <strong>tópico 5</strong> apresenta as referências bibliográficas utilizadas para realização das respostas. 
+O trabalho 3 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em responder duas perguntas, baseando-se no <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2"> enunciado</a> do trabalho 3. Diante disso, o <strong>tópico 1</strong> do presente documento apresenta alguns pontos relevantes do enunciado, enquanto o <strong>tópico 2</strong> é responsável por apresentar tais peguntas. Em seguida, o <strong>tópico 3</strong> traz informações relevantes sobre a construção das respostas. Por sua vez, o <strong>tópico 4</strong> é responsável por apresentar as informações gerais sobe o trabalho, como deadline e formato de entrega. Por fim, o <strong>tópico 5</strong> apresenta as referências bibliográficas utilizadas para realização das respostas. 
 </p>
 
 <br>
 
 # 1. SOBRE O ENUNCIADO
 
-<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2">enunciado do trabalho 3</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, existem 8 principais <u>princípios de um bom projeto de código</u>. A <storng>Tabela 1</strong> a seguir relaciona tais princípios com uma breve descrição de cada um.
+<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2">enunciado</a> do trabalho 3, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, existem 8 principais <u>princípios de um bom projeto de código</u>. A <storng>Tabela 1</strong> a seguir relaciona tais princípios com uma breve descrição de cada um.
 </p>
 
 <br>
