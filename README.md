@@ -2,7 +2,7 @@
 
 ## INTRODUÇÃO
 <p align='justify'> 
-O presente repositório é destinado à documentação dos trabalhos da disciplina de <a href="https://github.com/andrelanna/fga0242/tree/master">Técnicas de Programação em Plataformas Emergentes (TPPE)</a> da <a href="https://fga.unb.br/">Faculdade de Engenharias do Gama - Universidade de Brasília (FGA-UnB)</a>. Somado a isso, vale ressaltar que nosso grupo é identificado como 27, de acordo com a <a href="https://docs.google.com/spreadsheets/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/edit?gid=0#gid=0">planilha de grupos</a> disponibilizada pelo <a href="https://github.com/andrelanna">professor</a>. A <storng>Tabela 1</storng> a seguir sintetisa os integrantes do grupo. 
+O presente repositório é destinado à documentação dos trabalhos da disciplina de <a href="https://github.com/andrelanna/fga0242/tree/master">Técnicas de Programação em Plataformas Emergentes (TPPE)</a> da <a href="https://fga.unb.br/">Faculdade de Engenharias do Gama - Universidade de Brasília (FGA-UnB)</a>. Somado a isso, vale ressaltar que este grupo é identificado pelo número 27, conforme a <a href="https://docs.google.com/spreadsheets/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/edit?gid=0#gid=0">planilha de grupos</a> disponibilizada pelo <a href="https://github.com/andrelanna">professor</a>. A <storng>Tabela 1</storng> a seguir sintetiza os integrantes do grupo, <strong>o qual permaneceu o mesmo durante todos os trabalhos</strong>.
 </p>
 
 <table align='center'>
@@ -50,35 +50,61 @@ O presente repositório é destinado à documentação dos trabalhos da discipli
 
 <br></br>
 
-## SOBRE A ORGANIZAÇÃO DO REPOSITÓRIO
+## POLÍTICA DE ORGANIZAÇÃO DO PROJETO
 <p>
-O repositório foi organizado da seguitne forma:
+Para a oganização dos trabalhos da disciplina, foi decidido criar uma branch para cada entrega, de forma a separar os artefatos e entregas de acordo com cada etapa da disciplina. Tal estratégia ajuda tanto a correção do professor quanto à criação de um histórico de evolução do sistema desenvolvido no <a href = "">trabalho 1</a> e evoluído no <a href = "">trabalho 2</a>. A segui, confira uma breve descrição de cada uma das ramificações criadas no repositório atual.
 </p>
 
 <ol>
   <li>
-    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/main">Branch main</a>: responsável pela ramificação principal (origin). Nela, encontra-se a concatenação de todos os projetos, sendo útil para verificar um sistema contendo a integração de todos os outros trabalhos realizados ao longo da disciplina
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/main">Branch main</a>: responsável pela ramificação principal (origin). Nela, encontra-se a concatenação de todos os projetos, sendo útil para verificar a integração de todos os outros trabalhos realizados ao longo da disciplina, além de apresentar o repositório e suas políticas.
   </li>
   <li>
-    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Branch T1_TDD</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 1</strong>, o qual envolvia a aplicação da técnica de TDD, com triangulação e switch de testes parametrizados, entre outras características intrínsecas à tecnica.
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Branch T1_TDD</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 1</strong>, o qual envolveu a aplicação da técnica de TDD, com triangulação e switch de testes parametrizados, entre outras características intrínsecas à tecnica.
   </li>
   <li>
-    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_refactoring">Branch T2_Refactoring</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 2</strong>, o qual consiste em aplicar algumas técnicas de refatoração sobre determinados elementos do pŕojeto, variando entre métodos e classes, sobre o projeto entregue no trabalho 1 mencionado anteriormente.
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_refactoring">Branch T2_Refactoring</a>: responsável pela documentação e confecção do projeto relacionado ao <strong>Trabalho 2</strong>, o qual consiste em <strong>aplicar algumas técnicas de refatoração</strong> sobre determinados elementos do sistema desenvolvido no <strong>trabalho 1</strong>, para depois realizar uma <strong>descrirção detalhada dos efeitos da operação de refatoração no código de cada elemento refatorado</strong> (no formato de comentário no próprio código).
   </li>
   <li>
-    <a href="">Branch T3_(atividade)</a>: responsável pela documentação e projeto relacionado ao <strong>Trabalho 3</strong>, o qual ainda será definido.
+    <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T3_SoftwareProject">Branch T3_SoftwareProject</a>: responsável pela documentação confecção do projeto relacionado ao <strong>Trabalho 3</strong>, o qual consiste em responder duas perguntas sobre <strong>projeto de software</strong>.
   </li>
 </ol>
 
 <br></br>
 
-## MODELAGEM
+## ARTEFATOS
 
-<p align='justify'>
-A modelagem do projeto foi definida durante a realização do <a href="https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Trabalho 1</a>, e se perpetuou para todos os outros trabalhos. A seguir, confira a <strong>Imagem 1</strong> a seguir, a qual representa a modelagem do projeto, sendo esta desenvolvida respeitando a técnica denominada <a herf="https://www.ibm.com/docs/pt-br/rsas/7.5.0?topic=structure-class-diagrams">Diagrama de Classes UML</a>. Por fim, vale ressaltar que a confecção desse artefato não foi de carater obrigatório para a disciplina, sendo o objetivo de sua realização evitar determinados erros, documentar para possiveis atualizações futuras e, por fim, facilitar o entendimento do sistema.
+<p align = "justify">
+
+Conforme a realização de cada trabalho, diversos artefatos auxiliares foram desenvolvidos para auxiliar o projeto de software. Confira a seguir uma lista de artefatos realizados, em especial a evolução do diagrama de classes UML criado inicialmente no <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD"> trabalho 1</a>.
+
+<ol>
+<li> 
+    <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">Trabalho 1</a> - <strong>Test-Driven Development (TDD)</strong>
+    <ul>
+        <li>
+            <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/blob/T1_TDD/img/Diagrama%20de%20Classes%20UML.png">Diagrama de Classes UML</a>: primeira versão do artefato
+        </li>
+    </ul>
+</li>
+<li> 
+    <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_Refactoring">Trabalho 2</a> - <strong>Refactoring</strong>
+    <ul>
+        <li>
+            <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/blob/T2_Refactoring/img/Diagrama%20de%20Classes%20UML.png">Diagrama de Classes UML</a>: segunda versão do artefato
+        </li>
+        <li>
+            <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/blob/T2_Refactoring/Explica%C3%A7%C3%A3o%20Detalhada%20-%20Refatora%C3%A7%C3%A3o.pdf"> Relatório da Refatoração</a>: documenta e explica as atividades de refatoração aplicadas.
+        </li>
+    </ul>
+</li>
+<li> 
+    <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T3_SoftwareProject">Trabalho 3</a> - <strong>Software Project</strong>
+    <ul>
+        <li>
+            <a href = "">Relatório Final</a>: documenta as respostas referente às perguntas do trabalho 3
+        </li>
+    </ul>
+</li>
+</ol>
 </p>
-
-<figure align = "center">
-    <img src="img/Diagrama de Classes UML.png" width=100%>
-</figure>
-<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br><strong>Ref.:</strong> autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
