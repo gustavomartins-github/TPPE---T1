@@ -1,73 +1,17 @@
-# TRABALHO 02 (FGA0242 - TPPE)
+# TRABALHO 03 - TRABALHO FINAL (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 2 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em aplicar algumas técnicas específicas de refatoração sobre determinados métodos/classes do trabalho anterior, o qual consistiu em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho atual deve atender as seguintes cláusulas:
+O trabalho 3 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em responder duas perguntas, baseando-se no <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2"> enunciado do trabalho 3</a>. Diante disso, o <strong>tópico 1</strong> do presente documento apresenta alguns pontos relevantes do enunciado, enquanto o <strong>tópico 2</strong> é responsável por apresentar tais peguntas. Em seguida, o <strong>tópico 3</strong> traz informações relevantes sobre a construção das respostas. Por sua vez, o <strong>tópico 4</strong> é responsável por apresentar as informações gerais sobe o trabalho, como deadline e formato de entrega. Por fim, o <strong>tópico 5</strong> apresenta as referências bibliográficas utilizadas para realização das respostas. 
 </p>
-
-<ol>
-  <li>Linguagem de programação: Java</li>
-  <li>Frarmework de Teste: JUnit 4</li>
-  <li>A switch de teste definida no trabalho anterior deve continuar retornando verde</li>
-  <li><strong>Após aplicar uma técnica de refatoração, é necessário criar um comentário no código descrevendo os efeitos da operação de refatoração no código</strong></li>
-</ol>
-<p align = "justify"><strong>Obs.:</strong> deadline será daqui duas semanas (contabilizando a partir do dia 24/07)</p> 
-
-<p>
-Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo. Observe que o grupo continuar com os mesmo integrantes do trabalho anterior.
-</p>
-
-<table align='center'>
-<colgroup>
-    <col style="background-color: #722f37" />
-    <col span="2" />
-</colgroup>
-<tr>
-    <th>ID</th>
-    <th>NOME</th>
-    <th>MATRÍCULA</th>
-    <th>FOTO</th>
-</tr>
-<tr>
-    <td>1</td>
-    <td align='center'><a href = "https://github.com/gustavomartins-github">Gustavo Martins Ribeiro</a></td>
-    <td>200019228</td>
-    <td align='center'><img src="https://github.com/gustavomartins-github.png" width = 50%></t>
-</tr>
-<tr>
-    <td>2</td>
-    <td><a href = "https://github.com/PabloChristianno">Pablo Christianno Silva Guedes</a></td>
-    <td>200042416</td>
-    <td align='center'><img src="https://github.com/PabloChristianno.png" width = 50%></t>
-</tr>
-<tr>
-    <td>3</td>
-    <td align='center'><a href = "https://github.com/PhilipeSousa">Philipe de Sousa Barros</a></td>
-    <td>170154319</td>
-    <td align='center'><img src="https://github.com/PhilipeSousa.png" width = 50%></t>
-</tr>
-<tr>
-    <td>4</td>
-    <td align='center'><a href = "https://github.com/deivid-a1">Deivid Alves de Carvalho</a></td>
-    <td>190026758</td>
-    <td align='center'><img src="https://github.com/deivid-a1.png" width = 50%></t>
-</tr>
-</table>
-
-
-# SOBRE A REFATORAÇÃO
-
-<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp1">enunciado do problema</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, todos os grupo deverão aplicar as seguintes técnicas de refatoração:
-</p>
-
-<ol>
-    <li><strong>Extrair Método</strong>: consiste em identificar um conjunto de instruções dentro de um método e movê-las para um novo método separado. Isso melhora a legibilidade, promove a reutilização do código e facilita a manutenção.</li>
-    <li><strong>Extrair Classe</strong>: envolve identificar uma parte significativa de funcionalidades dentro de uma classe existente e movê-las para uma nova classe separada. Isso ajuda a organizar melhor o código, reduzindo a complexidade da classe original e promovendo uma melhor estruturação do sistema.</li>
-    <li><strong>Substituir método por objeto-método</strong>: nesse caso, um método de uma classe é transformado em um objeto de uma nova classe, onde o método original é movido como um método desse novo objeto. Isso pode ser útil quando há necessidade de manter estado entre chamadas de método ou para encapsular lógicas complexas de maneira mais organizada.</li>
-</ol>
 
 <br>
 
-<p align = "justify"> Somado a isso, de acordo com o <a href = "https://docs.google.com/spreadsheets/u/0/d/1uxbsT91bAKWi4LzTqbHanMdDl3pMxNhFTGA7i0EhN5E/htmlview#gid=0">formulário dos grupos</a>, nosso grupo é identificado pelo grupo <strong>27</strong>, logo devemos aplicar as tecnicas apresentadas acima nos seguintes métodos/classe:</p>
+# 1. SOBRE O ENUNCIADO
+
+<p align = "justify">Segundo o <a href="https://github.com/andrelanna/fga0242/tree/master/tps/tp2">enunciado do trabalho 3</a>, disponibilizado pelo <a href="https://github.com/andrelanna">professor</a>, existem 8 principais <u>princípios de um bom projeto de código</u>. A <storng>Tabela 1</strong> a seguir relaciona tais princípios com uma breve descrição de cada um.
+</p>
+
+<br>
 
 <br>
 <table align='center'>
@@ -76,63 +20,100 @@ Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as info
     <col span="2" />
 </colgroup>
 <tr>
-    <th>MÉTODO DE REFATORAÇÃO</th>
-    <th>CLASSE</th>
-    <th>MÉTODO</th>
+    <th>PRINCÍPIO</th>
+    <th>DESCRIÇÃO</th>
 </tr>
 <tr>
-    <th>Extrair Método</th>
-    <th>VENDA</th>
-    <th>calcularFrete()</th>
+    <th>Simplicidade</th>
+    <th>A definir.</th>
 </tr>
 <tr>
-    <th>Extrair Classe/Superclasse</th>
-    <th>CLIENTE</th>
-    <th>não se aplica</th>
+    <th>Elegância</th>
+    <th>A definir.</th>
 </tr>
 <tr>
-    <th>Substituir método por objeto-método</th>
-    <th>VENDA</th>
-    <th>calcularTotal()</th>
+    <th>Modularidade</th>
+    <th>A definir.</th>
+</tr>
+<tr>
+    <th>Boas Interfaces</th>
+    <th>A definir.</th>
+</tr>
+<tr>
+    <th>Extensibilidade</th>
+    <th>A definir.</th>
+</tr>
+<tr>
+    <th>Evitar Duplicação</th>
+    <th>A definir.</th>
+</tr>
+<tr>
+    <th>Portabilidade</th>
+    <th>A definir.</th>
+</tr>
+<tr>
+    <th>Código deve ser Idiomático e bem Documentado</th>
+    <th>A definir.</th>
 </tr>
 </table>
 
-# SOBRE A CORREÇÃO DO PROFESSOR
+<br>
 
-<p align = "justify">O professor atribuirá nota de acordo com a seguinte distruibuição</p>
-
-<table align='center'>
-<colgroup>
-    <col style="background-color: #722f37" />
-    <col span="2" />
-</colgroup>
-<tr>
-    <th>MÉTODO DE REFATORAÇÃO</th>
-    <th>VALOR</th>
-</tr>
-<tr>
-    <th>Extrair Método</th>
-    <th>25%</th>
-</tr>
-<tr>
-    <th>Extrair Superclasse</th>
-    <th>25%</th>
-</tr>
-<tr>
-    <th>Substituir método por objeto-método</th>
-    <th>50%</th>
-</tr>
-<table>
-
-# MODELAGEM
+# 2. SOBRE AS PERGUNTAS A SEREM RESPONDIDAS
 
 <p align = "justify">
-A seguir, para fins de revisão, observe o Diagrama de Classes UML do projeto.
+
+De acordo com o <a href = "https://github.com/andrelanna/fga0242/tree/master/tps/tp2">enunciado</a>, as seguintes perguntas devem ser respondidas:
+
+<ol>
+<li><i>"Para cada um dos princípios de bom projeto de código mencionados acima, apresente sua definição e relacione-o com os maus-cheiros de código apresentados por Fowler em sua obra."</i></li>
+<br>
+<li><i>"Identifique quais são os maus-cheiros que persistem no trabalho prático 2 do grupo, indicando quais os princípios de bom projeto ainda estão sendo violados e indique quais as operações de refatoração são aplicáveis. Atenção: não é necessário aplicar as operações de refatoração, apenas indicar os princípios violados e operações possíveis de serem aplicadas."</i>
+</li>
+</ol>
+
+Diante disso, é importante ressaltar que o enunciado se faz extermamente útil para responder a <strong>pergunta 1</strong>, visto que nele há uma listagem dos "<i>princípios de bom projeto de código</i>" mencionados pela pergunta, o que justifica a criação do tópico 2 do presente documento. Somado a isso, essa mesma pergunta precisa de um estudo prévio sobre os "<i>maus-cheiros de código</i>" presentes na obra <strong>Refactoring: Improving the Design of Existing Code</strong>, escrita pelo britânico <a href = "https://www.martinfowler.com/">Martin Fowler</a>
+
+Por outro lado, a pergunta 2 se mostra mais complexa, sendo uma boa estrátegia para sua resolução a divisão da complexidade em módulos menores de atividades. São eles:
+<ol>
+<li>Identificar os <strong>maus-cheiros</strong> que persistem no tabalho prático 2.</li>
+<li>Indicar quais são os <u>princípios de bom projeto</u> que <strong>permanecem  sendo violados</strong> no <strong>trabalho prático 2</strong>. (Tais princípios podem ser facilmente consultados pela <strong>Tabela 1</strong> no tópico 2 desse documento.)</li>
+<li>Indicar quais operações de refatoração são aplicáveis para resolver os maus-cheiros de código identificados na <storng>atividade 1.</strong></li>
+</ol> 
 </p>
 
 <br>
-<figure align = "center">
-    <img src="img/Diagrama de Classes UML.png" width=100%>
-</figure>
-<p align = "center"><strong>Imagem 1</strong>: artefato <i>Diagrama de Classes UML</i> <br>Ref.: autoria própria. (Desenvolvido em <a href = 'https://www.lucidchart.com/pages/pt/landing'>Lucidchart</a>)</p>
+
+# 3. SOBRE AS RESPOSTAS
+
+<p align = "justify">
+
+A definir.
+
+</p>
+
+<br>
+
+# 4. INFORMAÇÕES GERAIS DO TRABALHO
+
+<p align = "justify">
+
+Segundo o <a href = "https://github.com/andrelanna/fga0242/tree/master/tps/tp2">enunciado</a> do trabalho 3, além de responder as duas perguntas evidenciadas no <strong>tópico 3</strong> do presente documento, o trabalho deve atender as seguintes cláusulas:
+
+<ol>
+<li>O trabalho deverá ser entregue na forma de um <strong>relatório PDF</strong></li>
+<li>O trabalho deverá ser enviado ao <strong>repositório utilizado pelos trabalhos 1 e 2</strong> da disciplina</li>
+<li>A deadline (data limite de entrega) é dia <strong>15/08/2024</strong>, até <strong>23h50min</strong>.</li>
+</ol>
+
+Diante disso, considerando que o atual repositório foi utilizado para realização dos dois trabalhos (<a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T1_TDD">trabalho 1</a> sobre a técnica TDD e <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T2_refactoring">trabalho 2</a> sobre refatoração), o <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/T3_SoftwareProject">trabalho 3</a> (atual) econtra-se também neste repositório, respeitando a política de organização do projeto a qual pode ser encontrada na <a href = "https://github.com/gustavomartins-github/TPPE_Trabalhos/tree/main">apresentação do repositório</a>.
+</p>
+
+<br>
+
+# 5. REFERÊNCIAS BIBLIOGRÁFICAS
+
+- Martin Fowler. Refactoring: Improving the design of Existing Code. Addison-Wesley Professional, 1999.
+
+- Pete Goodliffe. Code Craft: The practice of Writing Excellent Code. No Starch Press, 2006.
 
