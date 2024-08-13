@@ -1,7 +1,7 @@
 # TRABALHO 01 (FGA0242 - TPPE)
 
 <p align='justify'> 
-O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Por fim, o trabalho deve atender as seguintes cláusulas:
+O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plataformas Emegentes - UnB Gama) consiste em desenvolver uma aplicação em java sobre comércio varejista de bens de consumo. Diante disso, o trabalho deve atender as seguintes cláusulas:
 </p>
 
 <ol>
@@ -9,52 +9,11 @@ O trabalho 1 referente a disciplina de TPPE (Técnicas de Programação em Plata
   <li>Frarmework de Teste: JUnit 4</li>
   <li>Todos os testes deverão ser triangulados utilizando a parametrização de testes oferecida pelo JUnit4</li>
 </ol>
-
-<p>
-Diante do exposto, a <strong><i>Tabela 1</i></strong> a seguir sintetiza as informações dos integrantes do grupo:
-</p>
-
-<table align='center'>
-<colgroup>
-    <col style="background-color: #722f37" />
-    <col span="2" />
-</colgroup>
-<tr>
-    <th>ID</th>
-    <th>NOME</th>
-    <th>MATRÍCULA</th>
-    <th>FOTO</th>
-</tr>
-<tr>
-    <td>1</td>
-    <td align='center'><a href = "https://github.com/gustavomartins-github">Gustavo Martins Ribeiro</a></td>
-    <td>200019228</td>
-    <td align='center'><img src="https://github.com/gustavomartins-github.png" width = 50%></t>
-</tr>
-<tr>
-    <td>2</td>
-    <td><a href = "https://github.com/PabloChristianno">Pablo Christianno Silva Guedes</a></td>
-    <td>200042416</td>
-    <td align='center'><img src="https://github.com/PabloChristianno.png" width = 50%></t>
-</tr>
-<tr>
-    <td>3</td>
-    <td align='center'><a href = "https://github.com/PhilipeSousa">Philipe de Sousa Barros</a></td>
-    <td>170154319</td>
-    <td align='center'><img src="https://github.com/PhilipeSousa.png" width = 50%></t>
-</tr>
-<tr>
-    <td>4</td>
-    <td align='center'><a href = "https://github.com/deivid-a1">Deivid Alves de Carvalho</a></td>
-    <td>190026758</td>
-    <td align='center'><img src="https://github.com/deivid-a1.png" width = 50%></t>
-</tr>
-</table>
-
 <p> 
-A seguir, confira as regras de negócio para este projeto
+Diante do exposto, confira a seguir as regras de negócio para este projeto.
 </p>
-<br></br>
+
+<br>
 
 # REGRAS DE NEGÓCIO
 
