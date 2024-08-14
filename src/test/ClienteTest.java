@@ -15,12 +15,13 @@ import TiposDeDados.*;
 public class ClienteTest {
 
     private CLIENTE cliente;
-
+    ENDERECO endereco1;
     // Configuração inicial para cada conjunto de testes
     @Before
     public void setUp() {
         // Configuração inicial do cliente (exemplo)
-        cliente = new CLIENTE(TipoCliente.PADRAO, Estado.SP, true);
+        endereco1 = new ENDERECO(Estado.SP, true);
+        cliente = new CLIENTE(TipoCliente.PADRAO, endereco1);
     }
 
     // Parâmetros para os testes
@@ -56,15 +57,16 @@ public class ClienteTest {
     // Teste setEstado
     @Test
     public void testSetEstado() {
-        cliente.setEstado(novoEstado);
-        assertEquals(novoEstado, cliente.getEstado());
+        cliente.getEndereco().setEstado(novoEstado);
+        assertEquals(novoEstado, cliente.getEndereco().getEstado());
     }
 
     // Teste setCapital
     @Test
+
     public void testSetCapital() {
-        cliente.setCapital(novaCapital);
-        assertEquals(novaCapital, cliente.isCapital());
+        cliente.getEndereco().setCapital(novaCapital);
+        assertEquals(novaCapital, cliente.getEndereco().isCapital());
     }
 
     // Teste setCashback

@@ -22,7 +22,8 @@ public class CarrinhoTest {
     // Configuração inicial para cada conjunto de testes
     @Before
     public void setUp() {
-        cliente = new CLIENTE(TipoCliente.PADRAO, Estado.SP, true);
+        ENDERECO endereco1 = new ENDERECO(Estado.SP, true);
+        cliente = new CLIENTE(TipoCliente.PADRAO, endereco1);
         carrinho = new CARRINHO(cliente);
         produto1 = new PRODUTO(1, "Produto A", 10.0f, UnidadeMedida.UN);
         produto2 = new PRODUTO(2, "Produto B", 15.0f, UnidadeMedida.UN);
