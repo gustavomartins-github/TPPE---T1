@@ -154,6 +154,7 @@ public class VENDA {
         4) Melhoria da Legibilidade: com a lógica complexa encapsulada em métodos menores dentro do objeto-método, o código se torna mais legível e compreensível,
         facilitando a leitura e a manutenção por outros desenvolvedores.
         5) Melhoria na escalabilidade: o objeto-método pode ser facilmente estendido para adicionar novas funcionalidades sem modificar a classe original, promovendo a escalabilidade e a flexibilidade do sistema
+		6) A forma de invocar o comportamento desse método (calcular o total da compra) mudou para um novo método o qual apenas retorna uma instância do objeto-método, o que economiza a memória total utilizada no sistema.
 
         Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 3 (Substituir método por objeto-método) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
     */
