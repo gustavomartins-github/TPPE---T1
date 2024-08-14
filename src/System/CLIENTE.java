@@ -12,7 +12,8 @@ import TiposDeDados.TipoCliente;
     4) Organização do código: a extração da classe CLIENTE torna a estrutura do código mais organizada, onde funcionalidades relacionadas são agrupadas em classes dedicadas (coisas de cliente na classe CLIENTE)
     e coisas de endereço na classe ENDERECO. Isso facilita a navegação e a compreensão do código.
     5) Simplificação da classe original: a classe CLIENTE se tornou mais simples e e manejável, facilitando o entendimento e manutenção de seu código.
-
+    6) mudança na foma como se tem acesso às informações de endereço do CLIENTE, pois os elementos que antes eram invocados diretamente sobre o CLIENTE, agora é invocado sobre uma instância de ENDERECO no CLIENTE
+    
     Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 2 (Extrair Método) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
 */
 public class CLIENTE {

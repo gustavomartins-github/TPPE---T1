@@ -13,7 +13,7 @@ import TiposDeDados.Regiao;
     informações impactam no cálculo do frete de uma venda que, por sua vez, impacta no valor 
     total dessa venda.
 
-    Por fim, a criação dessa classe impacta na forma como as outras classes acessam a informação,
+    Por fim, vale ressaltar novamente, a criação dessa classe impacta na forma como as outras classes acessam a informação,
     pois originalmente era feita de maneira direta sobre a classe CLIENTE, sendo agora necessário
     acessar as informações de endreço a partir de um objeto ENDERECO contido em um objeto CLIENTE.
 
