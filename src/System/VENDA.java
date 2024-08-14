@@ -24,140 +24,74 @@ public class VENDA {
         this.usarCashback = usarCashback;
     }
     
-
-
-    /* Método calcularFrete (REFATORADO)
-
-        Ao aplicar a técnica de refatoração "Extrair Método" sobre o método calcularFrete, perecebe-se os seguintes efeitos:
-
-        1) a partir do método fonte calcularFrete, foi criado dois novas métodos:
-            - verrificaValorDoFrete (CLIENTE cliente, int frete)
-            - aplicarDesconto(CLIENTE cliente, int frete)
-        2) Redução da complexidade do método: o método fonte foi extraído em partes menores, facilitando o entendimento
-        3) Melhoria na legibilidade: é mais agradável ler o método após a aplicação da refatoração Extrair Método
-        4) Manutenção facilitade: é mais fácil realizar manutenção no método após o aumento de sua modularização por meio da criação de novos métodos
-        5) Encapsulamento: a lógica mais complexa do método foi encapsulada em novos métodos, tornando a interação com o método mais facilitada
-
-        Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 2 (Extrair Classe) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
-    */
-    public int calcularFrete (CLIENTE cliente) {
-    	// Variaveis auxiliares
-        int frete = 0;
-        
-        frete = verificaValorDoFrete(cliente, frete);
-        
-        frete = aplicarDesconto(cliente, frete);
-        
-        return frete;
+    public int calcularFrete(CLIENTE cliente) {
+        int frete = calcularValorBaseFrete(cliente);
+        return aplicarDesconto(cliente, frete);
     }
-    // método alvo gerado pela técnica Extrair método a parir do método fonte calcularFrete
-    public int aplicarDesconto(CLIENTE cliente, int frete) {
-    	if (cliente.getTipoCliente() == TipoCliente.PRIME) {
-            frete = 0;
-        } else if (cliente.getTipoCliente() == TipoCliente.ESPECIAL) {
-            frete *= 0.7;
+
+    private int calcularValorBaseFrete(CLIENTE cliente) {
+        Regiao regiaoCliente = ENDERECO.getVerificarRegiao(cliente.getEndereco().getEstado());
+
+        if (cliente.getEndereco().isCapital()) {
+            return calcularFreteParaCapital(regiaoCliente);
+        } else {
+            return calcularFreteParaInterior(regiaoCliente);
         }
-    	return frete;
     }
-    // método alvo gerado pela técnica Extrair método a partir do método fonte calcularFrete
-    public int verificaValorDoFrete(CLIENTE cliente, int frete) {
-    	cliente.getEndereco();
-		Regiao regiaoCliente = ENDERECO.getVerificarRegiao(cliente.getEndereco().getEstado());
-    	
-    	switch (regiaoCliente) {
-        case Regiao.DISTRITO_FEDERAL:
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 5;
-        	}
-        	else {
-        		frete = 0;
-        	}
-        case Regiao.REGIAO_CENTRO_OESTE:
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 10;
-        	}
-        	else {
-        		frete = 13;
-        	}
-        case Regiao.REGIAO_NORDESTE:  
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 15;
-        	}
-        	else {
-        		frete = 18;
-        	}
-        case Regiao.REGIAO_NORTE:  
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 20;
-        	}
-        	else {
-        		frete = 25;
-        	}
-        case Regiao.REGIAO_SUDESTE:  
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 7;
-        	}
-        	else {
-        		frete = 10;
-        	}
-        case Regiao.REGIAO_SUL:  
-        	if (cliente.getEndereco().isCapital() == true) {
-        		frete = 10;
-        	}
-        	else {
-        		return 13;
-        	}
-    	}
-    	return frete;
-    }
-    
-    // AtualizarCashback
-    public void atualizarCashback (CLIENTE cliente, VENDA venda) {
-    	if (cliente.getTipoCliente() == TipoCliente.PRIME) {
-    		if (venda.getMetodoPagamento() == MetodoPagamento.CARTAO_EMPRESA) {
-    			cliente.setCashback(venda.calcularTotal() * 0.05f);
-    		}
-    		else {
-    			cliente.setCashback(venda.calcularTotal() * 0.03f);
-    		}
-    	}
-    }
-    
-    // Calcular ICMS
-    public float calcularICMS (CLIENTE cliente) {
-    	if (cliente.getEndereco().getEstado() == Estado.DF) {
-    		return 0.18f;
-    	}
-    	else {
-    		return 0.12f;
-    	}
-    }
-    
-    // Calcular Imposto Municipal
-    public float calcularImpostoMunicipal (CLIENTE cliente) {
-    	if (cliente.getEndereco().getEstado() == Estado.DF) {
-    		return 0f;
-    	}
-    	else {
-    		return 0.04f;
-    	}
-    }
-    
-    /* Método calcularTotal (REFATORADO)
 
-        Ao aplicar a técnica de refatoração "Substituir método por objeto-método" sobre o método calcularTotal, perecebe-se os seguintes efeitos:
+    private int calcularFreteParaCapital(Regiao regiaoCliente) {
+        switch (regiaoCliente) {
+            case DISTRITO_FEDERAL: return 5;
+            case REGIAO_CENTRO_OESTE: return 10;
+            case REGIAO_NORDESTE: return 15;
+            case REGIAO_NORTE: return 20;
+            case REGIAO_SUDESTE: return 7;
+            case REGIAO_SUL: return 10;
+            default: return 0;
+        }
+    }
 
-        1) A partir do método fonte calcularTotal, foi criado uma nova classe denominada CALCULADORADETOTAL. Nessa classe, se fez presente a necessidade de aplicação da técnica Extrair Método novamente 
-        2) Melhoria da Coesão: o objeto-método foca em realizar uma única tarefa, promovendo o princípio da responsabilidade única.
-        3) Maior facilidade em Teste Unitário: com a lógica dividida em métodos menores dentro do objeto-método, é mais fácil escrever testes unitários específicos e granulares, 
-        o que pode aumentando a cobertura e a qualidade dos testes.
-        4) Melhoria da Legibilidade: com a lógica complexa encapsulada em métodos menores dentro do objeto-método, o código se torna mais legível e compreensível,
-        facilitando a leitura e a manutenção por outros desenvolvedores.
-        5) Melhoria na escalabilidade: o objeto-método pode ser facilmente estendido para adicionar novas funcionalidades sem modificar a classe original, promovendo a escalabilidade e a flexibilidade do sistema.
-        6) A forma de invocar o comportamento desse método (calcular o total da compra) mudou para um novo método o qual apenas retorna uma instância do objeto-método, o que economiza a memória total utilizada no sistema.
+    private int calcularFreteParaInterior(Regiao regiaoCliente) {
+        switch (regiaoCliente) {
+            case DISTRITO_FEDERAL: return 0;
+            case REGIAO_CENTRO_OESTE: return 13;
+            case REGIAO_NORDESTE: return 18;
+            case REGIAO_NORTE: return 25;
+            case REGIAO_SUDESTE: return 10;
+            case REGIAO_SUL: return 13;
+            default: return 0;
+        }
+    }
 
-        Obs.: mais detalhes sobre essa atividade de refatoração pode ser vista no tópico 3 (Substituir método por objeto-método) do documento entitulado como "Explicação Detalhada - Refatoração.pdf" nesse repositório.
-    */
+    private int aplicarDesconto(CLIENTE cliente, int frete) {
+        switch (cliente.getTipoCliente()) {
+            case PRIME:
+                return 0;
+            case ESPECIAL:
+                return (int) (frete * 0.7);
+            default:
+                return frete;
+        }
+    }
+    
+    // Método atualizarCashback
+    public void atualizarCashback(CLIENTE cliente, VENDA venda) {
+        if (cliente.getTipoCliente() == TipoCliente.PRIME) {
+            float cashback = venda.calcularTotal() * (venda.getMetodoPagamento() == MetodoPagamento.CARTAO_EMPRESA ? 0.05f : 0.03f);
+            cliente.setCashback(cashback);
+        }
+    }
+    
+    // Método calcular ICMS
+    public float calcularICMS(CLIENTE cliente) {
+        return cliente.getEndereco().getEstado() == Estado.DF ? 0.18f : 0.12f;
+    }
+    
+    // Método calcular Imposto Municipal
+    public float calcularImpostoMunicipal(CLIENTE cliente) {
+        return cliente.getEndereco().getEstado() == Estado.DF ? 0f : 0.04f;
+    }
+
     public float calcularTotal() {
         return new CALCULADORADETOTAL(this).calcular();
     }
@@ -180,14 +114,14 @@ public class VENDA {
     }
 
     public CARRINHO getItensVendidos() {
-		return itensVendidos;
-	}
+        return itensVendidos;
+    }
 
-	public void setItensVendidos(CARRINHO itensVendidos) {
-		this.itensVendidos = itensVendidos;
-	}
+    public void setItensVendidos(CARRINHO itensVendidos) {
+        this.itensVendidos = itensVendidos;
+    }
 
-	public MetodoPagamento getMetodoPagamento() {
+    public MetodoPagamento getMetodoPagamento() {
         return metodoPagamento;
     }
 
@@ -196,13 +130,13 @@ public class VENDA {
     }
 
     public boolean isUsarCashback() {
-		return usarCashback;
-	}
+        return usarCashback;
+    }
 
-	public void setUsarCashback(boolean usarCashback) {
-		this.usarCashback = usarCashback;
-	}
-	
+    public void setUsarCashback(boolean usarCashback) {
+        this.usarCashback = usarCashback;
+    }
+
     @Override
     public String toString() {
         return "Venda{" +
