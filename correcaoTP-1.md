@@ -9,10 +9,10 @@ Critérios:
 
 |            | Nota (%) | Comentários                                          |
 |:----------:|:--------:|:-----------------------------------------------------|
-| Critério 1 | 40       | CadastroCliente, CadastroVenda, calcular vendas do ultimo mes. |
-| Critério 2 | 40       | Sim, para as funcionalidades implementadas           |
-| Critério 3 | 40       | Idem acima                                           |
-| Critério 4 | 40       | Idem acima                                           |
+| Critério 1 | 100      | CadastroCliente, CadastroVenda, calcular vendas do ultimo mes. |
+| Critério 2 | 100      | Sim, para as funcionalidades implementadas           |
+| Critério 3 | 100      | Idem acima                                           |
+| Critério 4 | 100      | Idem acima                                           |
 
 
 R1: NOk - Cadastrar clientes dos três diferentes tipos (padrão, especial e prime).
